@@ -3,12 +3,15 @@ project(leetcode_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
+include_directories(./leetcode/utils)
+
 add_executable(leetcode_cpp main.cpp)
 
 add_executable(knapsack_problem ./leetcode/editor/cn/knapsack_problem.cpp leetcode/editor/cn/knapsack_problem.cpp)
 
 add_executable(two_sum ./leetcode/editor/cn/1.two_sum.cpp)
-add_executable(3sum ./leetcode/editor/cn/15.3sum.cpp)
+add_executable(add_two_numbers ./leetcode/editor/cn/2.add_two_numbers.cpp ./leetcode/utils/listnode.cpp)
+add_executable(3sum ./leetcode/editor/cn/15.3sum.cpp leetcode/utils/listnode.cpp leetcode/utils/listnode.hpp)
 add_executable(coin_change ./leetcode/editor/cn/322.coin_change.cpp)
 add_executable(longest_increasing_subsequence ./leetcode/editor/cn/300.longest_increasing_subsequence.cpp)
 add_executable(maximum_subarray ./leetcode/editor/cn/53.maximum_subarray.cpp)
